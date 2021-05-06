@@ -1,0 +1,25 @@
+#
+# Create ssh key:
+# ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_github_$(date +%Y-%m-%d) -C "GitHub key of mbp"
+# ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_github_$(date +%Y-%m-%d) -C "GitHub key of work laptop"
+#
+# Keeping SSH session alive
+Host *
+    KeepAlive yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 60
+    ControlPath ~/.ssh/session-%r@%h:%p
+    ControlMaster auto
+    ControlPersist yes
+#
+# Host config examples
+#
+#Host foo
+#    HostName 10.1.1.2
+#    Port 22222
+#    User bar
+#    IdentityFile ~/.ssh/id_rsa_foo_2020-05-06
+#
+#Host *github.com
+#    IdentityFile ~/.ssh/id_ed25519_github_2011-09-06
+#
