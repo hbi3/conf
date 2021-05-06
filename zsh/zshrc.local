@@ -1,0 +1,17 @@
+export LANG=en_US.UTF-8
+
+alias c='clear'
+alias la='ls -al'
+alias lt='ls -alt'
+alias grep='grep --color=auto'
+alias watch='watch -n 1 -d'
+
+alias ta='tmux attach -t'
+alias tn='tmux new-session -s'
+alias tl='tmux list-sessions'
+
+# Overwrite alias in ~/.zshrc
+alias ag='/usr/bin/ag'
+
+# Golang
+export PATH=$PATH:/usr/local/go/bin
