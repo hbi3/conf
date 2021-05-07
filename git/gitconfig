@@ -1,13 +1,11 @@
 [user]
 	name = hbi3
 	email = xingmude@gmail.com
-
-[alias]
-    ch = checkout
-    co = commit
-    st = status
-    br = branch
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-
 [includeIf "gitdir:**/Work/**"]
 	path = ~/.gitconfig.work
+[alias]
+	ch = checkout
+	co = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
